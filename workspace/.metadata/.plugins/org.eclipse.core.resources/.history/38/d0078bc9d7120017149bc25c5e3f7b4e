@@ -1,0 +1,14 @@
+package cn.iolearn.demo;
+
+import java.io.FileInputStream;
+
+public class FileInputOutStreamDemo {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		FileInputStream fis=new FileInputStream("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\fos.txt");
+		System.out.println(fis.available());
+		
+	}
+}

@@ -1,0 +1,54 @@
+package MoreThreadLearn;
+import java.util.concurrent.locks.*;
+/*
+解决了多生产多消费的效率问题
+使用了JDK1.5 java.util.concurrent.locks包中的对象
+lock接口：它的出现比synchronized有更多的操作
+	lock():获取锁
+	unlock():释放锁
+同步代码块或者同步函数的锁的操作是隐式 的
+JDK1.5  Lock接口，按照面向对象的思想，将锁单独封装成一个对象，并提供了对锁的显示操作
+
+Lock接口就是同步的替代
+1、将线程中的同步更换为Lock接口的形式
+*/
+
+public class ProducerCustomerThread {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class Res2{
+	private String name;
+	private int count=1;
+	private boolean flag;
+	private Lock lock=new ReentrantLock();
+	public void set(String name){
+		//获取锁
+		lock.lock();
+		while (flag){
+			try {
+				this.wait();
+			} catch (Exception e) {}
+			this.name=name+"--"+count;
+			count++;
+			System.out.println(Thread.currentThread().getName()+"...生产者..."+this.name);
+		}
+		flag=true;
+		notify();
+	}
+	
+	public void get(){
+		while (flag){
+			try {
+				this.wait();
+			} catch (Exception e) {}
+			this.name=name+"--"+count;
+			count++;
+			System.out.println(Thread.currentThread().getName()+"...生产者..."+this.name);
+		}
+		flag=true;
+		notify();
+	}
+}

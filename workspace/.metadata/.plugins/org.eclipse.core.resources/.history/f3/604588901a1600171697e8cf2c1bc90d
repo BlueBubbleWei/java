@@ -1,0 +1,15 @@
+package cn.network.demo;
+
+public class TCPServer {
+	/**
+	* @param args
+	* 创建TCP服务端
+	* 思路：
+	* 	1、创建socket服务器端服务 。服务器端为了让客户端可以连上，必须提供端口，监听一个端口
+	* 	2、获取客户端对象，通过客户端的socket流和对应的客户端进行通讯
+	* 	
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

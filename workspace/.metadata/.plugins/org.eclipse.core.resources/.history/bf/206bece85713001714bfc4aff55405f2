@@ -1,0 +1,27 @@
+package cn.iolearn.demo;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Set;
+
+public class GetIntoTool {
+	/**
+	* @param 获取学生对象
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	*/
+	public static Set<Student> getStudents() throws NumberFormatException, IOException{
+		//键盘输入
+		BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in));
+//		获取键盘输入的信息
+		String line=null;
+		while((line=bufferedReader.readLine())!=null){
+//			因为录入的数据是有规律 的。可以通过指定的规则进行分割
+			String[] strings=line.split(",");
+//			将数组中的元素封装成对象
+			Student student=new Student(strings[0], Integer.parseInt(strings[1]), Integer.parseInt(strings[2]), Integer.parseInt(strings[3]));
+		}
+		return null;
+	}
+}

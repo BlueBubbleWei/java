@@ -1,0 +1,103 @@
+package MoreThreadLearn;
+import java.util.concurrent.locks.*;
+/*
+解决了多生产多消费的效率问题
+使用了JDK1.5 java.util.concurrent.locks包中的对象
+lock接口：它的出现比synchronized有更多的操作
+	lock():获取锁
+	unlock():释放锁
+同步代码块或者同步函数的锁的操作是隐式 的
+JDK1.5  Lock接口，按照面向对象的思想，将锁单独封装成一个对象，并提供了对锁的显示操作
+
+Lock接口就是同步的替代
+1、将线程中的同步更换为Lock接口的形式
+
+替换完运行失败了，因为wait没有同步区域，没有了所属的同步锁
+同步升级了。其中锁已经不再是任意对象，而是Lock类型的对象
+那么和任意对象绑定的监视方法，是不是也升级了，有了专门的和Lock类型锁的绑定的监视机器方法呢？
+查阅api。Condition接口替代啦Object中的监视器方法
+
+一寝监视器方法封装到每一个对象当中
+*/
+
+public class ProducerCustomerThread {
+	public static void main(String[] args) {
+		Res res=new Res();
+		Producer producer=new Producer(res);
+		Consumer consumer=new Consumer(res);
+//		创建线程
+	     Thread t1= new Thread(producer); 
+	     Thread t2 =new Thread(consumer);
+	     t1.start();
+	     t2.start();
+	}
+}
+
+class Res2{
+	private String name;
+	private int count=1;
+	private boolean flag;
+	private Lock lock=new ReentrantLock();
+	public void set(String name){
+		//获取锁
+		lock.lock();
+		try {
+			while (flag){
+				try {
+					this.wait();
+				} catch (Exception e) {}
+				this.name=name+"--"+count;
+				count++;
+				System.out.println(Thread.currentThread().getName()+"...生产者..."+this.name);
+			}
+			flag=true;
+			this.notifyAll();
+		} finally {
+			//释放锁
+			lock.unlock();
+		}
+	}
+	
+	public void get(){
+		lock.lock();
+		try {
+			while (!flag){
+				try {
+					this.wait();
+				} catch (Exception e) {}
+				this.name=name+"--"+count;
+				count++;
+				System.out.println(Thread.currentThread().getName()+"...消费者..."+this.name);
+			}
+			flag=true;
+			this.notifyAll();
+		} finally {
+			//释放锁
+			lock.unlock();
+		}
+	}
+}
+
+class Consumer implements Runnable{
+	private Res res;
+	public Consumer(Res res) {
+		this.res=res;
+	}
+	public void run() {
+		while(true){
+			res.set("土豆");
+		}
+	}
+}
+
+class Producers implements Runnable{
+	private Res res;
+	public Producers(Res res) {
+		this.res=res;
+	}
+	public void run() {
+		while(true){
+			res.get();
+		}
+	}
+}

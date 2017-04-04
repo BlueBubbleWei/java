@@ -1,0 +1,96 @@
+package MoreThreadLearn;
+
+
+/*
+两个储户到银行存钱，每个人存了三次，一次100元
+1、描述银行
+2、描述储户业务
+分析多线程是否存在安全隐患？
+1、线程任务中是否有共享的数据
+2、是否多条操作共享数据的代码
+*/
+public class ThreadA {
+	public static void main(String[] args) {
+//		创建任务对象
+		Customer customer=new Customer();
+		Thread t1=new Thread(customer);
+		Thread t2=new Thread(customer);
+		t1.start();
+		t2.start();
+	}
+
+}
+/*
+同步函数：其实就是在函数上加上了同步关键字进行修饰
+同步表现形式有两种：1、同步代码块  2、同步函数
+同步函数使用的锁是什么呢？
+函数需要被对象调用，那个对象不确定，但是函数一定要通过对象来调用，对象使用this
+*/
+
+/*
+如果同步函数被static修饰呢？
+static方法随着类加载，这时不一定有该类的对象，但是一定有一个该类的字节码文件对象
+这个对象简单的表示就是 类名.class    Class
+*/
+
+/*
+懒汉式
+在多线程并发誓，会出现线程安全问题
+加了同步就可以解决问题，无论是同步函数还是同步代码块都行，
+但是，效率降低了
+解决效率低的问题
+可以通过if对单例对象的双重判断的形式
+*/
+
+
+class Bank{
+	private int sum;
+	private Object obj = new Object();
+	
+	/*public void add(int n) {
+		synchronized (obj) {//同步代码 ，防异步
+			sum+=n;
+			try {
+				Thread.sleep(5);
+			} catch (Exception e) {}
+				System.out.println("sum="+sum);
+			
+		}
+	}*/
+	
+	//另一种写法 		同步代码 ，防异步
+	public synchronized void add(int n) {
+		sum+=n;
+		try {
+			Thread.sleep(5);
+		} catch (Exception e) {}
+			System.out.println("sum="+sum);
+			
+	}
+	
+}
+
+class Customer implements Runnable{
+	private Bank bank=new Bank();
+	private static Customer c2=null;
+	public void run() {
+		for(int x=0;x<3;x++){
+			bank.add(100);
+		}
+	}
+	public static synchronized Customer getInstance() {		
+		int sum=100;
+		if(c2==null){
+			synchronized (Customer.class) {
+				if(c2==null){
+					c2 =new Customer();
+				}
+			}
+		}
+		try {
+			Thread.sleep(5);
+		} catch (Exception e) {}
+			System.out.println("sum="+sum);		
+			return c2;
+	}
+}

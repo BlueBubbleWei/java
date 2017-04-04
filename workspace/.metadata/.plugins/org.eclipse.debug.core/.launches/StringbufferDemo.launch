@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/AndroidDemo"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="ALLUSERSPROFILE" value="C:\ProgramData"/>
+<mapEntry key="ANDROID" value="D:\Android\sdk\platform-tools;D:\Android\sdk\tools"/>
+<mapEntry key="APPDATA" value="C:\Users\john5\AppData\Roaming"/>
+<mapEntry key="COMPUTERNAME" value="JOHN5-PC"/>
+<mapEntry key="ComSpec" value="C:\Windows\system32\cmd.exe"/>
+<mapEntry key="CommonProgramFiles" value="C:\Program Files\Common Files"/>
+<mapEntry key="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+<mapEntry key="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+<mapEntry key="FP_NO_HOST_CHECK" value="NO"/>
+<mapEntry key="HOMEDRIVE" value="C:"/>
+<mapEntry key="HOMEPATH" value="\Users\john5"/>
+<mapEntry key="JAVA_HOME" value="D:\Program Files\Java\jdk1.8.0_111"/>
+<mapEntry key="LOCALAPPDATA" value="C:\Users\john5\AppData\Local"/>
+<mapEntry key="LOGONSERVER" value="\\JOHN5-PC"/>
+<mapEntry key="MYSQL_HOME" value="D:\mysql\mysql-5.7.15-winx64\mysql-5.7.15-winx64"/>
+<mapEntry key="NUMBER_OF_PROCESSORS" value="4"/>
+<mapEntry key="OS" value="Windows_NT"/>
+<mapEntry key="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+<mapEntry key="PROCESSOR_ARCHITECTURE" value="AMD64"/>
+<mapEntry key="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 94 Stepping 3, GenuineIntel"/>
+<mapEntry key="PROCESSOR_LEVEL" value="6"/>
+<mapEntry key="PROCESSOR_REVISION" value="5e03"/>
+<mapEntry key="PROMPT" value="$P$G"/>
+<mapEntry key="PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
+<mapEntry key="PUBLIC" value="C:\Users\Public"/>
+<mapEntry key="Path" value="D:/Program Files/jre/bin/server;D:/Program Files/jre/bin;D:/Program Files/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;D:\Program Files\Java\jdk1.8.0_111\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Android\sdk\platform-tools;D:\Android\sdk\tools; %MYSQL_HOME%\bin;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Users\john5\Desktop;"/>
+<mapEntry key="ProgramData" value="C:\ProgramData"/>
+<mapEntry key="ProgramFiles" value="C:\Program Files"/>
+<mapEntry key="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+<mapEntry key="ProgramW6432" value="C:\Program Files"/>
+<mapEntry key="SESSIONNAME" value="Console"/>
+<mapEntry key="SystemDrive" value="C:"/>
+<mapEntry key="SystemRoot" value="C:\Windows"/>
+<mapEntry key="TEMP" value="C:\Users\john5\AppData\Local\Temp"/>
+<mapEntry key="TMP" value="C:\Users\john5\AppData\Local\Temp"/>
+<mapEntry key="USERDOMAIN" value="john5-PC"/>
+<mapEntry key="USERNAME" value="john5"/>
+<mapEntry key="USERPROFILE" value="C:\Users\john5"/>
+<mapEntry key="windir" value="C:\Windows"/>
+<mapEntry key="windows_tracing_flags" value="3"/>
+<mapEntry key="windows_tracing_logfile" value="C:\BVTBin\Tests\installpackage\csilogfile.log"/>
+</mapAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cn.changeclass.demo.StringbufferDemo"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="AndroidDemo"/>
+</launchConfiguration>

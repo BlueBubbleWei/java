@@ -1,0 +1,24 @@
+package cn.mybuffer.demo;
+
+import java.io.Reader;
+
+public class MyBufferedReader {
+//	1、持有一个流对象
+	private Reader reader;
+//	因为是缓冲区对象，所以内部必须维护了数组
+	private char[]  buffer=new char[1024];
+	
+//	一初始化就必须明确被缓冲的对象
+	public MyBufferedReader(Reader reader) {
+		super();
+		this.reader = reader;
+	}
+	
+//	读取一个字符的方法，而且是高效的
+	/**
+	 * 
+	 */
+	private int myRead() {
+		return 0;
+	}
+}

@@ -1,0 +1,10 @@
+package cn.myserver.demo;
+
+public class Myserver {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

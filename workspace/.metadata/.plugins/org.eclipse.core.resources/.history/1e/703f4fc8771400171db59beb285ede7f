@@ -1,0 +1,13 @@
+package cn.inprint.demo;
+
+public class PipeStreamDemo {
+	/**
+	* @param args
+	* 管道流：
+	* 特点：读取管道和写入管道可以连接
+	* 需要使用多线程技术，单线程 容易死锁
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

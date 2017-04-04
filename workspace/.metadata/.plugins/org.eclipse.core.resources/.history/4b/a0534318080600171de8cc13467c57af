@@ -1,0 +1,50 @@
+package MoreThreadLearn;
+
+import java.util.Set;
+
+/*
+多线程间的通信，多个线程都在处理同一个资源，但是处理的任务却不一样
+生产者，消费者
+*/
+public class ProduceConsumerDemo {
+	public static void main(String[] args) {
+//		创建资源
+		Res res=new Res();
+//		创建两个任务
+		Producer producer=new Producer(res);
+		Customers customers=new Customers(res);
+	}
+}
+//描述资源
+class Res{
+	private String name;
+	private int count=1;
+	//提供给商品赋值的方法
+	public void set(String name){
+		this.name = name +"--"+count;
+		count++;
+		System.out.println(Thread.currentThread().getName()+"...生产者....."+this.name);
+	}
+//	提供一个获取商品的方法
+	void get() {
+		System.out.println(Thread.currentThread().getName()+"...消费者..."+this.name);
+	}
+}
+//生产者
+class Producer implements Runnable{
+	private Res res;
+	public Producer(Res r) {
+		this.res=r;
+	}
+	public void run(){
+		res.set("面包");
+	}
+}
+
+//消费者
+class Customers implements Runnable{
+	private Res res=new Res();
+	public void run(){
+		res.get();
+	}
+}

@@ -1,0 +1,24 @@
+package cn.iolearn.demo;
+
+public class Student {
+	private String name;
+	private int math,chinese,english;
+	private int sum;
+	/**
+	 * @param name
+	 * @param math
+	 * @param chinese
+	 * @param english
+	 */
+	public Student(String name, int math, int chinese, int english) {
+		super();
+		this.name = name;
+		this.math = math;
+		this.chinese = chinese;
+		this.english = english;
+		this.sum=math+chinese+english;
+	}
+	
+	
+	
+}

@@ -1,0 +1,73 @@
+package MoreThreadLearn;
+
+import java.util.Set;
+
+/*
+多线程间的通信，多个线程都在处理同一个资源，但是处理的任务却不一样
+生产者，消费者
+通过同步，解决了没生产就消费的问题
+但是出现了连续的生产没有消费的情况，和需求生产一个，消费一个的情况不符
+使用了等待唤醒机制
+
+wait();//该方法可以让线程处于冻结状态，并将线程临时存储到线程池中国
+notify();//唤醒指定线程池中的任意一个线程
+notifyAll();//唤醒指定线程池中的所有线程
+*/
+public class ProduceConsumerDemo {
+	public static void main(String[] args) {
+//		创建资源
+		Res res=new Res();
+//		创建两个任务
+		Producer producer=new Producer(res);
+		Customers customers=new Customers(res);
+		Thread t1=new Thread(producer);
+		Thread t2=new Thread(customers);
+		t1.start();
+		t2.start();
+	}
+}
+//描述资源
+class Res{
+	private String name;
+	private int count=1;
+	//定义标记
+	private boolean flag;
+	//提供给商品赋值的方法
+	public synchronized void set(String name){		
+		if(flag){
+			wait();
+		}
+		this.name = name +"--"+count;
+		count++;
+		System.out.println(Thread.currentThread().getName()+"...生产者....."+this.name);
+	}
+//	提供一个获取商品的方法
+	public synchronized void get() {
+		System.out.println(Thread.currentThread().getName()+"...消费者..."+this.name);
+	}
+}
+//生产者
+class Producer implements Runnable{
+	private Res res;
+	public Producer(Res res) {
+		this.res=res;
+	}
+	public void run(){
+		while(true){
+			res.set("面包");
+			
+		}
+		
+	}
+}
+
+//消费者
+class Customers implements Runnable{
+	private Res res;
+	public Customers(Res res) {
+	this.res=res;
+	}
+	public void run(){
+		res.get();
+	}
+}

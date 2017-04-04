@@ -1,0 +1,10 @@
+package cn.iolearn.demo;
+
+public class FileInputOutStreamDemo {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		FileInputStream =new FileInputStream();
+	}
+}

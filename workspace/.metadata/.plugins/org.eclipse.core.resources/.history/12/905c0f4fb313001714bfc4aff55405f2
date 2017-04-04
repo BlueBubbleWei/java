@@ -1,0 +1,28 @@
+package cn.mybuffer.demo;
+
+import java.io.PrintStream;
+import java.util.Properties;
+import java.util.Set;
+
+public class PropertiesDemo {
+	/**
+	* @param 演示properties的特有方法
+	*/
+	public static void main(String[] args) {
+//		Properties的基本存取
+//		创建一个properties
+		Properties properties=new Properties();
+		properties.setProperty("张三", "25");
+		properties.setProperty("李四", "20");
+		properties.setProperty("王五", "30");
+		
+		/*Set<String> set=properties.stringPropertyNames();
+		for (String name : set) {
+			String value=properties.getProperty(name);
+			System.out.println(name+"\t"+value);
+		}*/
+		
+		properties.list(System.out);
+	}
+//	PrintStream
+}

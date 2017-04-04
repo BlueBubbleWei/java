@@ -1,0 +1,26 @@
+package cn.inprint.demo;
+
+import java.io.FileInputStream;
+import java.io.SequenceInputStream;
+import java.util.ArrayList;
+
+import javax.sound.midi.Sequence;
+
+public class SequenceStreamDemo {
+	/**
+	* @param args
+	* 序列流
+	* 特点：流对象的有序排列
+	* 解决问题：将多个输入流合并成一个输入流。将多个源合并成一个源，对于多源的操作会变得简单
+	* 功能：特殊之处在构造函数上，一初始化就合并了多个流进来
+	* 
+	* 演示序列流
+	* 如何获取一个 Enumeriation呢？Vector
+	*/
+	public static void main(String[] args) {
+		ArrayList<FileInputStream> a1=new ArrayList<FileInputStream>();
+		a1.add(new FileInputStream("1.txt"));
+		SequenceStreamDemo s1=new SequenceStreamDemo();
+//		SequenceInputStream sequenceInputStream=new SequenceInputStream(s1, s2);
+	}
+}

@@ -1,0 +1,11 @@
+package com.example.helloworld;
+public class PersonDemo {
+	public static void main(String [] args){
+		
+	}
+}
+
+/*class Person{
+	
+}
+*/

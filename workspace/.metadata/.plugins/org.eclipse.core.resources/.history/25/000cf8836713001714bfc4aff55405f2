@@ -1,0 +1,28 @@
+package cn.mybuffer.demo;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class MyBufferedReaderDemo {
+	/**
+	* @param args
+	 * @throws IOException 
+	*/
+	public static void main(String[] args) throws IOException {
+		FileReader fileReader=new FileReader("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\fos.txt");
+	/*	
+		BufferedReader bufferedReader=new BufferedReader(fileReader);
+		String line=null;
+		while((line=bufferedReader.readLine())!=null){
+			System.out.println(line);
+		}
+	*/
+		MyBufferedReader bufferedReader=new MyBufferedReader(fileReader);
+		String line=null;
+		while((line=bufferedReader.myReadLine())!=null){
+			System.out.println(line);
+		}
+	}
+}

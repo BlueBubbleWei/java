@@ -1,0 +1,14 @@
+package cn.inprint.demo;
+
+public class RandomAccesFileDemo {
+	/**
+	* @param args
+	* RandomAccessFile
+	* 特点：1、只能操作文件
+	* 2、既能读，又能写
+	* 功能：getFilePointer  用于操作文件指针的方法
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

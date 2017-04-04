@@ -1,0 +1,22 @@
+package cn.iolearn.demo;
+
+public class FileInputStreamDemo4 {
+	/**
+	* @param args
+	* 复制一个文件
+	* 思路：
+	* 读取元数据，将数据写到目的文件中
+	* 用到了流，操作设备上的设备
+	* 读用到输入流 写用的输出流
+	* 而且操作的还是文件。需要用到字节流中操作文件的流对象
+	*/
+	public static void main(String[] args) {
+		copyText();
+	}
+	
+	public static void copyText() {
+//		创建一个输入流和源数据相关联
+		FileInputStreamDemo4 fileInputStream=new FileInputStreamDemo4("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\fos.txt");
+//		创建一个输出流，并通过输出流创建一个目的流
+	}
+}

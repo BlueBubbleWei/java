@@ -1,0 +1,58 @@
+package cn.myframe.demo;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+public class MyFrame extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MyFrame frame = new MyFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MyFrame() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JButton btnNewButton1 = new JButton("开始");
+		btnNewButton1.setBounds(39, 10, 62, 28);
+		btnNewButton1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		contentPane.setLayout(null);
+		contentPane.add(btnNewButton1);
+		
+		textField = new JTextField();
+		textField.setText("颠三倒四");
+		textField.setBounds(112, 51, 189, 88);
+		contentPane.add(textField);
+		textField.setColumns(20);
+	}
+}

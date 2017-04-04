@@ -1,0 +1,10 @@
+package com.example.helloworld;
+
+public class MyJava {
+	public static void main(String[] args){
+		int a=3,b;
+//		System.out.println(a<<1);
+		System.out.println(2<<3);
+	}
+
+}

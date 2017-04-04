@@ -1,0 +1,18 @@
+package cn.mybuffer.demo;
+
+
+public class WrapperDemo {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		Person
+	}
+}
+
+
+class Person{
+	void eat(){
+		System.out.println("吃饭");
+	}
+}

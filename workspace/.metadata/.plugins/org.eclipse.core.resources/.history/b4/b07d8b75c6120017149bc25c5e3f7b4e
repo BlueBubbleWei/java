@@ -1,0 +1,13 @@
+package cn.iolearn.demo;
+
+public class FileOutputDemo2 {
+	/**
+	* @param 输出已有文件的内容
+	* 既然是读，使用InputStream
+	* 而且是要操作文件 FileInputStream
+	* 创建文件字节读出流对象时，必须必须明确与之关联的数据源
+	*/
+	public static void main(String[] args) {
+//		为了确保文件一定在读之前是存在的，将字符串路径封装成File对象
+	}
+}

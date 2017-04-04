@@ -1,0 +1,11 @@
+package MoreThreadLearn;
+/*
+多线程间的通信，多个线程都在处理同一个资源，但是处理的任务却不一样
+生产者，消费者
+描述资源
+*/
+public class ProduceConsumerDemo {
+	public static void main(String[] args) {
+		
+	}
+}

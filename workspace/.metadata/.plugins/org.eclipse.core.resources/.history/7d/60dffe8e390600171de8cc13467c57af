@@ -1,0 +1,13 @@
+package MoreThreadLearn;
+/*
+解决了多生产多消费的效率问题
+使用了JDK1.5 java.util.concurrent.locks包中的对象
+lock接口：它的出现比synchronized有更多的操作
+	lock():获取锁
+	unlock():释放锁
+*/
+public class ProducerCustomerThread {
+	public static void main(String[] args) {
+		
+	}
+}

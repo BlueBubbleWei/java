@@ -1,0 +1,9 @@
+1489371814333	Rename field 'num'
+1489392441603	Extract method 'printArry'
+1489393330273	Extract method 'swap'
+1489393849137	Extract method 'getKeyCount'
+1489397233706	Extract method 'sortChar'
+1489470996694	Rename compilation unit 'Collection.java'
+1489545462038	Rename package 'cn.myarraylist.demo'
+1489650265045	Move compilation unit
+1489657036690	Delete element

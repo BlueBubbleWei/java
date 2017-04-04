@@ -1,0 +1,12 @@
+package cn.inprint.demo;
+
+public class printDemo {
+	/**
+	* @param args
+	* IO包中的其他功能流对象
+	* 功能流对象
+	* 特点：解决的问题,特有的方法
+	* 打印流--输出流
+	* PrintStream(字节流)  PrintWriterStrean(字符流)
+	*/
+}

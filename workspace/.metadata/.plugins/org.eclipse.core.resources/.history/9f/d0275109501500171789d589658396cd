@@ -1,0 +1,42 @@
+package cn.myframe.demo;
+
+public class RegexTest {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+//		matchesDemo();
+		splitDemo();
+	}
+
+	/**
+	 * 
+	 */
+	private static void splitDemo() {
+		String temp="小王八   ，  李四  wewe   dddd ";
+		String regex=" +";//包含1-n个空格一起切
+		String netadd="www.baidu.com";
+		String net="\\.";
+		
+		String[] names=temp.split(regex);
+		for(String name:names){
+//			System.out.println(name+"--");
+		}
+		String[] strs=netadd.split(net);
+		for(String str:strs){
+			System.out.println(str);
+		}
+		
+	}
+
+	/**
+	 * 
+	 */
+	private static void matchesDemo() {
+		//需求：校验手机号码是否正确
+		String tel="13255538615";
+		String regex="1[32456789][0-9]{9}";
+		boolean b=tel.matches(regex);
+		System.out.println(tel+"\t"+b);
+	}
+}

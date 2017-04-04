@@ -1,0 +1,16 @@
+package cn.network.demo;
+
+import java.net.Inet6Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class IPDemo {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) throws  UnknownHostExceptions {
+		
+		InetAddress ip=InetAddress.getLocalHost();
+		System.out.println(ip);
+	}
+}

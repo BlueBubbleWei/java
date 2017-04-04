@@ -1,0 +1,33 @@
+package cn.iolearn.demo;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class FileOutputStream3 {
+	/**
+	* @param args
+	* 演示第二种读取方式 read(byte[])
+	*/
+	public static void main(String[] args) {
+		FileInputStream  fileInputStream=null;
+		try {
+			fileInputStream=new FileInputStream("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\fos.txt");
+//		创建一个字节数组
+			byte[] b=new byte[2];
+			
+//			调用read(byte[])方法
+			int len=fileInputStream.read(b);//len记录的是往字节数组里存储的字节个数
+			System.out.println(len+"..."+new String(b));//将字节数组转成字符串打印  看效果
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			if(fileInputStream!=null)
+				try {
+					fileInputStream.close();
+				} catch (Exception e) {
+					//一般 可以throw RuntimeException异常。或者将异常信息写入到日志文件中进行记录
+					e.printStackTrace();
+				}
+		}
+	}
+}

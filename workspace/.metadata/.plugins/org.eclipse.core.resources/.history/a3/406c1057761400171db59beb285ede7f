@@ -1,0 +1,10 @@
+package cn.inprint.demo;
+
+public class PipeStreamDemo {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

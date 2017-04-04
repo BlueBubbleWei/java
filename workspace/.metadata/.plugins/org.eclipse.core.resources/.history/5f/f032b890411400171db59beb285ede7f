@@ -1,0 +1,14 @@
+package cn.mybuffer.demo;
+
+public class TestDemo1 {
+	/**
+	* @param args
+	* 需求1：通过键盘录入的数据，将数据保存到一个文件中
+	* 明确以：有源吗？有    有目的吗？  有
+	* 源：InputStream  Reader
+	* 目的：OutputStream    Writer
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

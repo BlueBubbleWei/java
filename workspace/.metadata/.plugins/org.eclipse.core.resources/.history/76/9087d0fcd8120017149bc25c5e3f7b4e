@@ -1,0 +1,13 @@
+package cn.iolearn.demo;
+
+public class FileInputStream {
+	/**
+	* @param args
+	* 复制一个文件
+	* 思路：
+	* 读取元数据，将数据写到目的文件中
+	* 用到了流，操作设备上的设备
+	* 读用到输入流 写用的输出流
+	* 而且操作的还是文件。需要用到字节流中操作文件的流对象
+	*/
+}

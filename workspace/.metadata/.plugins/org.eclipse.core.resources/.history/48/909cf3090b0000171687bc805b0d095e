@@ -1,0 +1,14 @@
+package com.example.helloworld;
+
+public class UsrInput {
+	public static void main(String[] args){
+//		需求：获取1-100之间的6的倍数的个数
+		int a=1,sum=0;
+		wihle(a<100){
+			if(a%6==0){
+				sum++;
+				System.out.println("a="+a);
+			}
+		}
+	}
+}

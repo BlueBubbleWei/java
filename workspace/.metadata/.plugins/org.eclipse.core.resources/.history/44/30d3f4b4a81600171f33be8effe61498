@@ -1,0 +1,7 @@
+package cn.network.demo;
+
+public class UploadThreads {
+	public static void main(String[] args) {
+		
+	}
+}

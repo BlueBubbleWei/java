@@ -1,0 +1,29 @@
+package cn.mybuffer.demo;
+
+import java.io.Reader;
+
+public class MyLineNumberReader extends MyBufferedReader{
+	
+//	定义一个计数器
+	private int lineNumber;
+
+	public MyLineNumberReader(Reader reader) {
+		super(reader);
+	}
+/**
+ * 
+ * @覆盖父类的读一行的方法
+ */
+	public String myReadLine() {
+		return super.myReadLine();
+	}
+	public int getLineNumber() {
+		return lineNumber;
+	}
+
+	public void setLineNumber(int lineNumber) {
+		this.lineNumber = lineNumber;
+	}
+
+	
+}

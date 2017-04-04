@@ -1,0 +1,14 @@
+package cn.network.demo;
+
+public class ChatTest {
+	/**
+	* @param args
+	* 通过UDP协议
+	* 完成一个聊天程序
+	* 一个负责发送数据的任务，一个负责接收数据的任务。两个任务需要同时执行
+	* 可以使用多线程技术
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

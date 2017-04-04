@@ -1,0 +1,22 @@
+package cn.iolearn.demo;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class FileOutputStream3 {
+	/**
+	* @param args
+	* 演示第二种读取方式 read(byte[])
+	*/
+	public static void main(String[] args) {
+		FileInputStream  fileInputStream=null;
+		try {
+			fileInputStream=new FileInputStream("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\fos.txt");
+//		创建一个字节数组
+			byte[] b=new byte[2];
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+//		FileInputStream fileInputStream=new FileInputStream(file);
+	}
+}

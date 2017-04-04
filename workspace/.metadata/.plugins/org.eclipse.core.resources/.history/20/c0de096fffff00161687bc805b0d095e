@@ -1,0 +1,14 @@
+package com.example.helloworld;
+
+public class MyJava {
+	public static void main(String[] args){
+		int a=3,b;
+		/*System.out.println(a<<1);*/
+		//最有效率运算2乘以8，通过位运算
+		System.out.println(2<<3);
+//		对连个整数变量的值进行变换(不需要第三方变量)
+		int c=3,d=4;
+		
+	}
+
+}

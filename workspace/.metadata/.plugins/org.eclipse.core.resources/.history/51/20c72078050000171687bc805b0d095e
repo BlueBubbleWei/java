@@ -1,0 +1,27 @@
+package com.example.helloworld;
+
+public class UsrInput {
+	public static void main(String[] args){
+//		需求：根据用户输入的数值，显示该数值对应的星期
+		/*步骤：
+		1、定义变量，记录数据
+		2、通过判断结构语句if，对该变量进行判断
+		3、根据不同的条件，通过输出语句显示不同的结果*/
+		int week=3;
+		if(week==1){
+			System.out.println("星期一");
+		}else if(week==2){
+			System.out.println("星期二");
+		}else if(week==3){
+			System.out.println("星期三");
+		}else if(week==4){
+			System.out.println("星期四");
+		}else if(week==5){
+			System.out.println("星期五");
+		}else if(week==6){
+			System.out.println("星期六");
+		}else if(week==7){
+			System.out.println("星期日");
+		}
+	}
+}

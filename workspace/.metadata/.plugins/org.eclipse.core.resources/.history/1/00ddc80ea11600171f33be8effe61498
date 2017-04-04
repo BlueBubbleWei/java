@@ -1,0 +1,12 @@
+package cn.network.demo;
+
+import java.net.ServerSocket;
+
+public class UploadPicServer {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		ServerSocket serverSocket=new ServerSocket(18080);
+	}
+}

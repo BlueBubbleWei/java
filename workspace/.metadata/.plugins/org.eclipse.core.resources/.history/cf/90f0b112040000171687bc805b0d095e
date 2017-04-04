@@ -1,0 +1,8 @@
+package com.example.helloworld;
+
+public class UsrInput {
+	public static void main(String[] args){
+//		需求：根据用户输入的数值，显示该数值对应的星期
+		
+	}
+}

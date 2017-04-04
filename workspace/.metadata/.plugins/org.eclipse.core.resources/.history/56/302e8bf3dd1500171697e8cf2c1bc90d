@@ -1,0 +1,11 @@
+package cn.myframe.demo;
+
+public class ResTest1 {
+	/**
+	* @param args
+	* 我我我...... 要要.........吃吃吃吃.........饭饭饭
+	*/
+	public static void main(String[] args) {
+		String pharse="我我我...... 要要.........吃吃吃吃.........饭饭饭";
+	}
+}

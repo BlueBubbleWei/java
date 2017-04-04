@@ -1,0 +1,53 @@
+package cn.myframe.demo;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JToolBar;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+
+public class MyMenu extends JFrame {
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MyMenu frame = new MyMenu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MyMenu() {
+		getContentPane().setLayout(null);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBackground(Color.RED);
+		setJMenuBar(menuBar);
+		
+		JMenu menu = new JMenu("文件");
+		menu.setBackground(Color.DARK_GRAY);
+		menuBar.add(menu);
+		
+		JMenu menu_1 = new JMenu("打开菜单项");
+		menu.add(menu_1);
+		
+		JMenu menu_2 = new JMenu("哈哈哈");
+		menu.add(menu_2);
+		
+		JMenu menu_3 = new JMenu("关闭文件");
+		menu.add(menu_3);
+	}
+}

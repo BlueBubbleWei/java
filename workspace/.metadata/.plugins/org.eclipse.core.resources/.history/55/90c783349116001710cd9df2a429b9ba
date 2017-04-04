@@ -1,0 +1,30 @@
+package cn.network.demo;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class UploadTextClient {
+	/**
+	* @param args
+	* 上传文本的客户端。读取本地的文本数去，发送给服务端，服务端接收完毕后，回馈“上传成功字样”
+	* 客户端 socket
+	 * @throws IOException 
+	 * @throws UnknownHostException 
+	*/
+	public static void main(String[] args) throws UnknownHostException, IOException {
+//		客户端socket
+		Socket socket=new Socket("192.168.1.136", 10006);
+		
+//		确定数据源，本地文件
+		BufferedReader bufferedReader=new BufferedReader(new FileReader("client.txt"));
+		
+//		确定数据流，socket输出
+		BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+	}
+}

@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package cn.network.demo;
+
+/**
+ * @author john5
+ *
+ */
+public class TCPClient2 {
+	/**
+	* @param args
+	*/
+}

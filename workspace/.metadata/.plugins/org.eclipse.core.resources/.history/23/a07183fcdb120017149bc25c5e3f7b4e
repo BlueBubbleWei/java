@@ -1,0 +1,27 @@
+package cn.iolearn.demo;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class CopyTextByBufferDemo {
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		CopyTextByBuffer();
+	}
+
+	/**
+	 * 
+	 */
+	private static void CopyTextByBuffer() {
+		FileInputStream fileInputStream=null;
+		FileOutputStream fileOutputStream=null;
+		try {
+			fileInputStream=new FileInputStream("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\fos.txt");
+			fileOutputStream=new FileOutputStream("D:\\java\\workspace\\Stage2\\src\\cn\\iolearn\\demo\\tempfile\\copy.txt");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}
