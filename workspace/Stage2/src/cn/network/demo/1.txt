@@ -10,3 +10,43 @@
 可是浏览器到底向服务器发送了什么样的请求呢？
 怎么验证？将tomacat服务器换掉。自定义一个服务器接收浏览器发送的数据
 这样就知道浏览器发送的是什么
+
+1、自定义服务器
+
+浏览器给服务器发送的信息如下：
+	192.168.1.136...connected
+	GET / HTTP/1.1    //请求方式//请求的路径//http的协议版本
+	//http协议的请求头消息
+	//请求消息中的属性信息
+	Host: 192.168.1.136:9090 
+	Connection: keep-alive
+	Upgrade-Insecure-Requests: 1
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36//用户代理接受的平台
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8//接收的解析文件的格式
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: zh-CN,zh;q=0.8//支持的语言
+	空格
+	
+模拟浏览器获取网页信息
+
+
+
+
+
+网络架构
+两种:
+	C/S client  server
+		特点：
+			1、客户端和服务器都需要编写
+			2、客户端需要维护
+			3、客户端可以分担部分运算
+			
+
+如果 大型运算，比如网络游戏
+		
+	B/S brower  server
+		特点：
+			1、只需要编写服务端，客户端其实就是已有的服务器
+			2、客户端不需要维护的
+			3、预算全在服务器端
+	

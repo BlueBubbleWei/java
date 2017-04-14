@@ -1,0 +1,13 @@
+package stage3.htmlcss.demo;
+
+public class Demo1 {
+	/**
+	* @param args
+	*1、获得jasp工厂
+	*2、通过工厂获得解析器实现类
+	*3、使用解析器加载xml文档   ===> document
+	*/
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<!--<!DOCTYPE students SYSTEM "students.dtd">  -->
+<students> 
+  <student number="001"> 
+    <name>小明</name>  
+    <age>8</age>  
+    <sex>男</sex> 
+  </student>  
+  <student number="002"> 
+    <name>小花</name>  
+    <age>8</age>  
+    <sex>女</sex> 
+  </student>  
+  <student number="003">
+    <name>小王八</name>
+    <age>2</age>
+    <sex>男</sex>
+  </student>
+</students>

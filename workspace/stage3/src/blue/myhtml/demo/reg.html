@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta  http-equiv="refresh" content="3" url="http://www.baidu.com"><!--刷新一下，过3秒以后，跳转到指定地址 -->
+
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	POST / HTTP/1.1
+Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*
+Accept-Language: zh-CN
+Content-Type: application/x-www-form-urlencoded
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+Host: 192.168.1.136:1256
+Content-Length: 63
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+user=%E9%9F%A6%E7%8E%89%E6%A2%85&pwd=123&sex=female&course=Java
+ -->
+ 
+ <!-- 
+ 	GET /?user=%E8%A7%84%E8%8C%83&pwd=gg&sex=female&course=HTML&country=China  HTTP/1.1
+	Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*
+	Accept-Language: zh-CN
+	UA-CPU: AMD64
+	Accept-Encoding: gzip, deflate
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+	Host: 192.168.1.136:1256
+	Connection: Keep-Alive
+  -->
+  
+  <!-- 
+  Get和Post的区别
+  1、存储方式
+  	GEt提交，会将提交的信息显示在地址栏
+  	POST提交，不会讲提交的信息显示在地址栏
+  2、敏感信息
+  	Get提交，对于敏感信息不安全
+  	POST提交，对于每个信息安全
+  3、提交数据体积
+  	GET提交，因为存储到地址栏，数据体积有效
+  	POST提交，可以提交大体积数据
+  4、封装方式
+  	GET提交，将提交的数据封装在请求头的请求行中
+  	POST提交，将提交的数据封装在请求体中
+  	
+  5、编码格式
+  	GET提交中文，Tomcat服务器，需要先通过ISO8859-1先编码，再解码
+  	POST提交中文，可以先通过ISO8859-1先编码，再解码的方法中，也直接通过服务器端的request对象的setCharacterEncoding("gbk")，进行直接解码
+  	
+  	综上所述：表单提交建议使用POST提交
+  	和服务端交互的三种方式
+  	1、地址栏输入url地址，GET
+  	2、点击超链接 GET
+  	3、表单： GET	POST
+  	
+  	如果在表单页面上加入了校验，判断每一个组件，只要有一个组件填写错误，无法提交
+  	问，服务端在收到该数据时，还需要再次校验吗？
+  		服务器需要校验，为了安全性
+  	
+  	如果把校验定义在了服务器端，表单页面还需要校验吗？
+  		需要，为了增强用户的体验效果，为了减轻服务器的压力
+  	
+   -->
+	<form action="http://192.168.1.136:1256" method="get" >
+		<table border="1" bordercolor="#3333FF" width="700" cellpadding="10" cellspacing="0">
+			<tr><th colspan="2">用户注册 </th></tr>
+			<tr><td>用户名称：</td><td><input type="text" name="user"/></td></tr>
+			<tr><td>输入密码：</td><td><input type="password" name="pwd"/></td></tr>
+			<tr><td>确认密码：</td><td><input type="password" /></td></tr>
+			<tr><td>选择性别：</td><td><input type="radio" name="sex" value="female">女
+			<input type="radio" name="sex" value="male">男   </td></tr>
+			<tr><td>选择技术：</td><td><input type="CheckBox" name="course"  value="Java" />JAVA
+			<input type="CheckBox" name="course"  value="HTML" />HTML
+			<input type="CheckBox" name="course"  value="CSS" />CSS</td></tr>
+			<tr><td>选择国家：</td><td><select name="country">
+				<option  >请选择国家</option>
+			<option value="China" >中国</option><option value="wukelan">乌克兰</option>
+			</select></td></tr>
+			<tr><th colspan="2">
+			<!-- <input type="submit" value="提交数据"> -->
+				<input type="submit" value="提交"> <button type="reset">重置</button>
+			
+			</th></tr>
+		</table>
+	</form>
+</body>
+</html>

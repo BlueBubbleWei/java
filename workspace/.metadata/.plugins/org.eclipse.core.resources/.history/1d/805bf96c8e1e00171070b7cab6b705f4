@@ -1,0 +1,40 @@
+package stage3.htmlcss.demo;
+
+import java.io.File;
+
+import javax.lang.model.element.Element;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+
+public class Demo1 {
+	/**
+	* @param args
+	*1、获得jasp工厂
+	*2、通过工厂获得解析器实现类
+	*3、使用解析器加载xml文档   ===> document
+	*/
+	public static void main(String[] args) {
+		//获得所有学生信息
+		DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+//		通过工厂获得解析器实现
+		try {
+			DocumentBuilder builder=factory.newDocumentBuilder();
+//			使用解析器加载xml文档  ===>document
+			Document document=builder.parse(new File("src/students.xml"));
+//			获得所有学生元素的集合
+			NodeList studentList=document.getElementsByTagName("student");
+//			遍历集合
+			for (int i = 0; i < studentList.getLength(); i++) {
+				Element stuEle=(Element) studentList.item(i);
+//				获得学生的number属性
+				String number=stuEle.getA
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+}

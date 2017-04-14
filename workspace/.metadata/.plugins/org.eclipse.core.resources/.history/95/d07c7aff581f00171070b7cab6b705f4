@@ -1,0 +1,5 @@
+package my.daolearn.demo;
+
+public class StudentDaoImpl implements StudentDao{
+
+}

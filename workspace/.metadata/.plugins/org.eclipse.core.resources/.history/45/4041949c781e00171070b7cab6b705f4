@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 解决乱码问题，告诉浏览器当前文档类型和编码 -->
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#des{
+		height:1000px;width:500px;border:1px solid #000;background-color:lightgreen;
+	}
+	#ads{
+		width:100px;height:100px;border:1px solid #000;background-color:lightblue;
+	}
+</style>
+</head>
+<body>
+
+	<h1 id="top">静夜思</h1>
+	<font size="7" face="黑体" color="Lightgreen">李白</font>
+	<hr>
+	<p>床前明月光，<br>
+	疑是地上霜。<br>
+	举头望明月，<br>
+	低头思故乡。<br>
+	</p>
+	<div id="des">
+	
+	</div>
+	<div id="ads"></div>
+	<!-- 插入java代码 -->
+	<pre>
+		public void main(String[] args){
+			int i=i+1;
+			System.out.println(i);
+		}
+	</pre>
+	<p >
+	<a href="#top">回到顶部</a>
+	</p>
+</body>
+<script>
+	document.getElementById("des").onmousemove=function(event){
+		//1、获得鼠标的位置
+		var x=event.clientX;
+		var y=event.clientY;
+		var ads=document.getElementById("ads");
+		//设置id="ads"的div的位置为鼠标的位置
+		//1、设置 ads的div的position属性为absolute
+		ads.style.position="absolute";
+		//2、设置ads的div的top和left属性哦日鼠标的对应坐标
+		ads.style.top=(y-50)+"px";//让鼠标在移动的div的中心点，所以宽高为原来的1/2
+		ads.style.left=(x-50)+"px";
+	}
+</script>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="student.css"?>
+<!-- 下面是一个学生 -->
+<students>
+    <student>
+        <code><![CDATA[$]]></code>
+        <name number="color">&lt;tomcat&gt;</name>
+        <age>7</age>
+         <age>
+             7
+             </age>
+        <male>male</male>
+    </student>
+</students>

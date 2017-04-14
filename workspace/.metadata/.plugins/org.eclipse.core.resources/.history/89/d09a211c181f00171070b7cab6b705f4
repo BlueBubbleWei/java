@@ -1,0 +1,41 @@
+package stage3.htmlcss.demo;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+//获得所有学生信息并打印出来
+public class Myhandler extends DefaultHandler{
+	@Override
+	public void startDocument() throws SAXException {
+		// TODO Auto-generated method stub
+			System.out.println("文档开始解析啦！");
+	
+	}
+
+	@Override
+	//参数3告诉开发者当前的元素时那个元素
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		// TODO Auto-generated method stub
+		super.startElement(uri, localName, qName, attributes);
+	}	
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		// TODO Auto-generated method stub
+		super.characters(ch, start, length);
+	}
+	
+	@Override
+	public void endDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		super.endDocument();
+	}
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		// TODO Auto-generated method stub
+		super.endElement(uri, localName, qName);
+	}
+
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 解决乱码问题，告诉浏览器当前文档类型和编码 -->
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 name="top">静夜思</h1>
+	<font size="7" face="黑体" color="Lightgreen">李白</font>
+	<hr>
+	<p>床前明月光，<br>
+	疑是地上霜。<br>
+	举头望明月，<br>
+	低头思故乡。<br>
+	</p>
+	<!-- 插入java代码 -->
+	<pre>
+		public void main(String[] args){
+			int i=i+1;
+			System.out.println(i);
+		}
+	</pre>
+	<div height="2000" width="100px" border="1px solid #000">
+	<button href="top">回到顶部</button>
+	</div>
+	
+</body>
+</html>

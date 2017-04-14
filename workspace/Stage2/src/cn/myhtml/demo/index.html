@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+框架标签的特点，可以将浏览器窗口分割成多个子窗体，每一个子窗体都可以显示一个单独的资源（网页，图片）
+1、将窗体分割，<frameset>
+2、一旦拆分，就出现子窗体，子窗体标签：<frame>
+ -->
+ <!-- rows是上下拆分，上面30%   先对窗体进行上下拆分-->
+<frameset rows="30%,*">
+	<!-- 明确上子窗体的页面 -->
+	<frame src="top.html"/>
+	<!-- 对下子窗体继续进行左右拆分 -->
+	<frameset cols="30%,*">
+		<frame src="left.html" />
+	</frameset>
+	<frame/>
+</frameset>
+</body>
+</html>

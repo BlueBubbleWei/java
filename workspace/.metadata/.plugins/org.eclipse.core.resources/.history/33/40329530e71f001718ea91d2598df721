@@ -1,0 +1,59 @@
+package my.daolearn.demo;
+
+import java.util.List;
+
+import org.dom4j.Document;
+import org.dom4j.Element;
+
+public class StudentDaoImpl implements StudentDao{
+
+	@Override
+	public void saveStudent(Student stu) {
+		// TODO Auto-generated method stub
+		try {
+			Document document=getDocument();
+			Element root=document.getRootElement();
+//			在根元素上添加student子元素，添加属性
+			Element studentEle=root.addElement("student").addAttribute("number", stu.getNumber());
+//			在student上添加name,age
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	private Document getDocument() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteStudent(String number) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Student getStudentByNumber(String number) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> getAllStudent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

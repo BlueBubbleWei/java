@@ -1,8 +1,0 @@
-package cn.network.demo;
-
-public class TCPClient2 {
-	/**
-	* @param args
-	* 需求：客户端发送数据给服务端，并读取服务端反馈的数据
-	*/
-}

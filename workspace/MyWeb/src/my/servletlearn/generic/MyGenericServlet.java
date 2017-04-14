@@ -1,0 +1,74 @@
+package my.servletlearn.generic;
+
+import java.io.IOException;
+import java.util.Enumeration;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public abstract class MyGenericServlet implements Servlet,ServletConfig{
+	private ServletConfig config;
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+		this.config=config;
+	}
+	@Override
+	//不要忘记抽象方法不需要被实现
+	public abstract void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException;
+	
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ServletConfig getServletConfig() {
+		// TODO Auto-generated method stub
+		return config;
+	}
+
+	@Override
+	public String getServletInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getInitParameter(String arg0) {
+		return config.getInitParameter(arg0);
+	}
+
+	public Enumeration<String> getInitParameterNames() {
+		return getServletConfig().getInitParameterNames();
+	}
+
+	public ServletContext getServletContext() {
+		return getServletConfig().getServletContext();
+	}
+
+	public String getServletName() {
+		return getServletConfig().getServletName();
+	}
+
+	/*public String getServletName() {
+		return getServletConfig().getServletName();
+	}
+	public String getInitParameter(String args0) {
+		return  getServletConfig().getInitParameter(args0);
+	}
+	
+	public Enumeration getInitParameterNames() {
+		return getServletConfig().getInitParameterNames();
+	}
+
+	public ServletContext getServletContext() {
+		return getServletConfig().getServletContext();
+	}*/
+	
+
+}

@@ -27,7 +27,8 @@ public class Myserver {
 		
 //		给浏览器一个回馈
 		PrintWriter out=new PrintWriter(socket.getOutputStream(),true);
-		out.println("<font size='7' color='green'>欢迎光临，你访问的是自定义的服务器！</font>");
-		
+		out.println("<font size='7' color='green'>欢迎光临，你访问的是自定义的服务器！</font>");//可以用localhost:9090访问
+		socket.close();
+		serverSocket.close();
 	}
 }

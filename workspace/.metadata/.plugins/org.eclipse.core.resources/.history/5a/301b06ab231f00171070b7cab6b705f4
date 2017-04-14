@@ -1,0 +1,27 @@
+package my.xmlparse.dom4j;
+
+import java.io.File;
+
+import javax.lang.model.element.Element;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.io.SAXReader;
+
+//查询出所有学生的所有信息
+public class Demo2 {
+	public static void main(String[] args) {
+		SAXReader reader=new SAXReader();
+		try {
+			Document document=reader.read(new File("src/students.xml"));
+//			首先要获得根元素
+			Element root=document.getRootElement();
+//			迭代根元素下的所有名叫student的子元素
+			
+			System.out.println(document.asXML());//将document.asXML()由xml转成String类型
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

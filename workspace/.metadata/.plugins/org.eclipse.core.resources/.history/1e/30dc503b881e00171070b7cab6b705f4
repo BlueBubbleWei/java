@@ -1,0 +1,21 @@
+package stage3.htmlcss.demo;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class BeanFactory {
+	public static A getBean() throws IOException {		
+//		1、读取配置文件
+		Properties properties =new Properties();
+		try {
+			properties.load(new FileInputStream("src/BeanFactory.properties"));
+			//2、取出哪个类
+			String className=properties.getProperty("A");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+}

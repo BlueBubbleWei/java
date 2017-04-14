@@ -1,0 +1,24 @@
+package stage3.htmlcss.demo;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class BeanFactory {
+	public static A getBean() throws IOException {		
+//		1、读取配置文件
+		Properties properties =new Properties();
+		try {
+			properties.load(new FileInputStream("src/BeanFactory.properties"));
+			//2、取出哪个类
+			String className=properties.getProperty("A");
+//			3、根据完整类名创建实例并返回
+			Class<A> class1=(Class<A>)Class.forName(className);
+			return class1.newInstance();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

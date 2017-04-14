@@ -1,0 +1,26 @@
+package stage3.htmlcss.demo;
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+public class Demo1 {
+	/**
+	* @param args
+	*1、获得jasp工厂
+	*2、通过工厂获得解析器实现类
+	*3、使用解析器加载xml文档   ===> document
+	*/
+	public static void main(String[] args) {
+		DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+//		通过工厂获得解析器实现
+		try {
+			DocumentBuilder builder=factory.newDocumentBuilder();
+//			使用解析器加载xml文档  ===>document
+			builder.parse(new File("src/"))
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 定义表单的范围 -->
+	<form>
+	<!-- 记住：表单组件都需要定义name和value属性，目的是为了让服务器端获取客户端提交的数据 -->
+	<!-- 对于文本框和密码框，文本区域可以不指定value属性，因为输入的内容就是value的值 -->
+	<!-- 输入组件 -->
+	用户名称：<input type="text" name="user" /><br/>
+	输入密码：<input type="password" name="pwd" /><br/>
+	选择性别：
+	<input type="radio" name="sex" value="male">男
+	<input type="radio" name="sex" value="female" checked>女<br>
+	选择技术：<input type="checkbox">JAVA<input type="checkbox">HTML<input type="checkbox">CSS<br>
+	选择文件：<input type="file" name="file"><br>
+	
+	
+	选择国家<select>
+	<option>选择国家</option>
+	<option selected>中国</option>
+	<option>乌克兰<option>
+	</select>
+	
+	<!-- 不需要客户端用户看到，但是数据需要提交给服务端，这时这些数据可以定义在 Input type="hidden" 用name和value记录 -->
+	隐藏区域：<input type="hidden" name="my" value="20"><br>
+	一个按钮：<input type="button" value="pressme" onclick="alert('哈哈')"><br>
+	<!-- 这是一张神奇的图片。带有提交的功能，其实很简单，就是为了美化提交按钮 -->
+	<!-- 图片一张：<input type="image" src="1.png"><br> -->
+	<input type="submit" value="提交"> <button type="reset">重置</button>
+	</form>
+</body>
+</html>

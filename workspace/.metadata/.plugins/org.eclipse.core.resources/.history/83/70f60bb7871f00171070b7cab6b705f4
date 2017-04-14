@@ -1,0 +1,43 @@
+package my.daolearn.demo;
+
+import java.util.List;
+
+public class StudentDaoImpl implements StudentDao{
+
+	@Override
+	public void saveStudent(Student stu) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteStudent(String number) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Student getStudentByNumber(String number) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> getAllStudent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

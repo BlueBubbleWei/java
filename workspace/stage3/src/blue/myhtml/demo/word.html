@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*css样式一般先加载，放在head里面*/
+div{
+	width:30px;
+	height:50px;
+	background:lightgreen;
+}
+</style>
+</head>
+<body>
+	<marquee>天上下雨不打伞</marquee>
+	<marquee direction="down" behavior="slide">天上下雨不打伞</marquee>
+	<!--<marquee >天上下雨不打伞</marquee>  -->
+	<!-- 
+	html的标签都具备具体的含义，font字体，dl列表
+	需求是：只为封装数据，不想使用具备特定含义的标签
+	html中提供了两个标签仅用于封装数据，不具备特殊含义以及结构
+	
+	div span
+	div标签结束后有换行
+	span标签结束后没有换行
+	标签分类：
+		块级标签（块级元素）：结尾处后换行 div  dl table tr td
+		行内标签（行内元素）：结尾处没有换行 span a img input
+	 -->
+	 <div>区域一</div>
+	 <span>哈哈</span><span>嘿嘿</span>
+</body>
+</html>

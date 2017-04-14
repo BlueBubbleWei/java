@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+    id="WebApp_ID" version="3.0">
+  <display-name>MyWeb</display-name>
+		<!-- 注册servlet2到项目中 -->
+	  <servlet>
+	      <!-- servlet-name给你要注册的servlet起一个名字，随便写，不能重复 -->
+	      <servt-name>Aservlet</servt-name>
+	      <!-- 完整类名 -->
+	      <servlet-class>my.serletlearn.demo.AServlet</servlet-class>
+	  </servlet>
+	 
+	  <sevlet-mapping>
+	       <!-- 分配路径给servlet -->
+	  <!-- 当前为哪个servlet分配路径 -->
+	  <servlet-name>Aservlet</servlet-name>
+	  <!-- "/"相对于项目路径的。====>http://localhost:8080/MyWeb 
+	  访问该servlet的url==>http://localhost:8080/MyWeb/AServlet
+	  -->
+	  <url-pattern>/Aservlet</url-pattern>
+	  </sevlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+   
+  </welcome-file-list>
+  
+</web-app>

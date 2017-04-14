@@ -1,0 +1,5 @@
+package my.daolearn.demo;
+//	Dao ==> Data  Access Object
+public interface StudentDao {
+
+}
